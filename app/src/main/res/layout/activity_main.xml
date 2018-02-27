@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.johanita.johanaromerotalleruno.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/cover"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_artista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Artista"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="30sp"
+                android:textColor="#ffffff"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tv_verano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verano"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:layout_below="@id/tv_artista"
+                android:layout_marginLeft="30sp"/>
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/like"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@id/iv_heart"
+                android:layout_margin="5dp"/>
+            <ImageView
+                android:id="@+id/iv_heart"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/heart"
+                android:layout_toLeftOf="@id/iv_share"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="5dp"/>
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/share"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="0.3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_weight="o.1"
+                    android:id="@+id/iv_music"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cover_music_1"
+                    />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8">
+                    <TextView
+                        android:id="@+id/tv_texto1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Texto1"/>
+                    <TextView
+                        android:id="@+id/tv_texto2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/texto2"
+                        android:layout_below="@id/tv_texto1"/>
+                </RelativeLayout>
+                <ImageView
+                    android:layout_weight="0.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/play"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
